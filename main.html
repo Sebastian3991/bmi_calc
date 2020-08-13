@@ -6,14 +6,16 @@
 	<script type="text/javascript" src="scripts/main.js" async></script>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
-<body>
+<body>	
+		<div id="container">
 		<form id="form">
-			<input type="number" id="weight" placeholder="Weight in kg">
-			<input type="number" id="age" placeholder="Age">
-			<input type="number" id="height" placeholder="Height in cm">
+			<input type="number" id="weight" placeholder="Weight in kg" class="userdata">
+			<input type="number" id="age" placeholder="Age" class="userdata">
+			<input type="number" id="height" placeholder="Height in cm" class="userdata">
 			<button type="submit" id="submit">Get Bmi</button>	
 		</form>
-		<div id="output">Dein BMI</div>
+
+		<div id="output">Result</div>
 	</div>
 </body>
 </html>

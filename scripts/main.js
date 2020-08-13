@@ -1,13 +1,12 @@
 const submitbtn = document.getElementById('submit');
 
-//get data from
+//get user data when submit button is pressed
 
 submitbtn.addEventListener('click', e=> {
 e.preventDefault();
 const weight = document.getElementById('weight').value;
 const height = document.getElementById('height').value;
-console.log(calculate(height,weight));
-
+calculate(height, weight);
 }); 
 
 function calculate(height, weight) {
