@@ -3,19 +3,69 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
-	<script type="text/javascript" src="scripts/main.js" async></script>
+	<script type="text/javascript" src="scripts/gauge.js" defer></script>
+	<script type="text/javascript" src="scripts/main.js" defer></script>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>	
+		<h1>Bmi calculator for adults</h1>
+		<!-- whole site container -->
 		<div id="container">
-		<form id="form">
-			<input type="number" id="weight" placeholder="Weight in kg" class="userdata">
-			<input type="number" id="age" placeholder="Age" class="userdata">
-			<input type="number" id="height" placeholder="Height in cm" class="userdata">
-			<button type="submit" id="submit">Get Bmi</button>	
-		</form>
 
+		<!-- cotainer for inputs and calculate button -->
+		<form id="form">
+			<label for="weight">Weight</label>
+			<input type="number" id="weight" placeholder="...in kg" class="userdata">
+			<label for="age">Age</label>
+			<input type="number" id="age" placeholder="...in years" class="userdata">
+			<label for="height">Height</label>
+			<input type="number" id="height" placeholder="...in cm" class="userdata">
+		</form>
+		<button type="submit" id="submit">Calculate your bmi</button>
+		<!-- output container -->
+		<table>
+			<tr>
+				<th>Bmi Range(BMI = (kg/m²))</th>
+				<th></th>
+				<th></th>
+			</tr>
+			<tr>
+				<th>Category</th>
+				<th>from</th>
+				<th>to</th>
+			</tr>
+			<tr>
+				<td>Low</td>
+				<td></td>
+				<td>18.5</td>
+			</tr>
+			<tr>
+				<td>Normal</td>
+				<td>18.5</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td>Obese(Level 1)</td>
+				<td>25</td>
+				<td>30</td>
+			</tr>
+			<tr>
+				<td>Obese(Level 2)</td>
+				<td>30</td>
+				<td>35</td>
+			</tr>
+			<tr>
+				<td>Obese(Level 3)</td>
+				<td>35</td>
+				<td>40</td>
+			</tr>
+		</table>
 		<div id="output">Result</div>
+	<div id="scale-container">
+	<canvas id="scale"></canvas>
+	<div id="preview-bmi"></div>
+    </div>
 	</div>
+
 </body>
 </html>
