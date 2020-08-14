@@ -42,14 +42,26 @@ const submitbtn = document.getElementById('submit');
 let gender = "male";
 //get user data when submit button is pressed
 
-submitbtn.addEventListener('click', e=> {
+submitbtn.addEventListener('onclick', e=> {
 let weight = document.getElementById('weight').value;
 let height = document.getElementById('height').value;
 let age = document.getElementById('age').value;
 
+
+
 //call calculate
 calculate(height, weight, age);
 }); 
+
+//mobile touch
+submitbtn.addEventListener('touchstart', e=> {
+let weight = document.getElementById('weight').value;
+let height = document.getElementById('height').value;
+let age = document.getElementById('age').value;
+//call calculate
+calculate(height, weight, age);
+}); 
+
 
 //change gender dependion on user input
 for(let i=0; i<genderbtns.length; i++) {
