@@ -63,7 +63,10 @@ for(let i=0; i<genderbtns.length; i++) {
 function calculate(height, weight, age) {
 	
   //calculated bmi saved inside finalrounded
-  
+  let xheight = height /100;
+  let fheight = xheight*xheight;
+  let final = weight/fheight;
+  let finalrounded = Math.round(final*10)/10;
 
   //check if bmi is okay number
     //call gauge function to build gauge and display final result
@@ -81,7 +84,7 @@ function calculate(height, weight, age) {
             opts.staticZones[4].max =30;
             opts.staticZones[5].min =30;
             opts.staticZones[5].max =40;
-            console.log(age);
+            document.getElementById('output').innerHTML = "your bmi is " + finalrounded;
       }
       else if(age >=25 && age <=34) {
             opts.staticZones[0].min =12;
@@ -96,7 +99,7 @@ function calculate(height, weight, age) {
             opts.staticZones[4].max =30;
             opts.staticZones[5].min =30;
             opts.staticZones[5].max =40;
-            console.log(age);
+            document.getElementById('output').innerHTML = "your bmi is " + finalrounded;
       }
       else if(age >=35 && age <=44) {
             opts.staticZones[0].min =12;
@@ -111,7 +114,7 @@ function calculate(height, weight, age) {
             opts.staticZones[4].max =30;
             opts.staticZones[5].min =30;
             opts.staticZones[5].max =40;
-            console.log(age);
+            document.getElementById('output').innerHTML = "your bmi is  " + finalrounded;
       }
       else if(age >=45 && age <=54) {
             opts.staticZones[0].min =12;
@@ -126,7 +129,7 @@ function calculate(height, weight, age) {
             opts.staticZones[4].max =30;
             opts.staticZones[5].min =30;
             opts.staticZones[5].max =40;
-            console.log(age);
+            document.getElementById('output').innerHTML = "your bmi is " + finalrounded;
       } 
       else if(age >=55 && age <=64) {
             opts.staticZones[0].min =12;
@@ -141,7 +144,7 @@ function calculate(height, weight, age) {
             opts.staticZones[4].max =30;
             opts.staticZones[5].min =30;
             opts.staticZones[5].max =40;
-            console.log(age);
+            document.getElementById('output').innerHTML = "your bmi is " + finalrounded;
       }
       else if(age >=65) {
             opts.staticZones[0].min =12;
@@ -156,7 +159,7 @@ function calculate(height, weight, age) {
             opts.staticZones[4].max =30;
             opts.staticZones[5].min =30;
             opts.staticZones[5].max =40;
-            console.log(age);
+            document.getElementById('output').innerHTML = "your bmi is " + finalrounded;
       }
 
    }else if(gender === "female") {
@@ -173,7 +176,7 @@ function calculate(height, weight, age) {
             opts.staticZones[4].max =30;
             opts.staticZones[5].min =30;
             opts.staticZones[5].max =40;
-            console.log(age);
+            document.getElementById('output').innerHTML = "your bmi is " + finalrounded;
       }
       else if(age >=25 && age <=34) {
             opts.staticZones[0].min =12;
@@ -188,7 +191,7 @@ function calculate(height, weight, age) {
             opts.staticZones[4].max =30;
             opts.staticZones[5].min =30;
             opts.staticZones[5].max =40;
-            console.log(age);
+            document.getElementById('output').innerHTML = "your bmi is " + finalrounded;
       }
       else if(age >=35 && age <=44) {
             opts.staticZones[0].min =12;
@@ -203,7 +206,7 @@ function calculate(height, weight, age) {
             opts.staticZones[4].max =30;
             opts.staticZones[5].min =30;
             opts.staticZones[5].max =40;
-            console.log(age);
+            document.getElementById('output').innerHTML = "your bmi is " + finalrounded;
       }
       else if(age >=45 && age <=54) {
             opts.staticZones[0].min =12;
@@ -218,7 +221,7 @@ function calculate(height, weight, age) {
             opts.staticZones[4].max =30;
             opts.staticZones[5].min =30;
             opts.staticZones[5].max =40;
-            console.log(age);
+            document.getElementById('output').innerHTML = "your bmi is " + finalrounded;
       }
       else if(age >=55 && age <=64) {
             opts.staticZones[0].min =12;
@@ -233,7 +236,7 @@ function calculate(height, weight, age) {
             opts.staticZones[4].max =30;
             opts.staticZones[5].min =30;
             opts.staticZones[5].max =40;
-            console.log(age);
+            document.getElementById('output').innerHTML = "your bmi is " + finalrounded;
       }
       else if(age >=65) {
             opts.staticZones[0].min =12;
@@ -248,16 +251,11 @@ function calculate(height, weight, age) {
             opts.staticZones[4].max =30;
             opts.staticZones[5].min =30;
             opts.staticZones[5].max =40;
-            console.log(age);
+            document.getElementById('output').innerHTML = "your bmi is " + finalrounded;
       }
    } else {
         document.getElementById('output').innerHTML = "make sure to file an age over 18";
-
    }
-  let xheight = height /100;
-  let fheight = xheight*xheight;
-  let final = weight/fheight;
-  let finalrounded = Math.round(final*10)/10;
   gauge.set(finalrounded);
 }
 
