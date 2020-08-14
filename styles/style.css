@@ -96,6 +96,10 @@ button {
 
 }
 
+button:hover {
+	border: 2px solid black;
+}
+
 #output {
 	background-color: #F3B607;
 	display: flex;
