@@ -1,4 +1,7 @@
-var opts = {
+// gauge basic configuration
+
+
+let opts = {
   angle: 0.001, // The span of the gauge arc
   lineWidth: 0.44, // The line thickness
   radiusScale: 1, // Relative radius
@@ -33,7 +36,13 @@ gauge.animationSpeed = 32; // set animation speed (32 is default value)
 gauge.set(20);
  // set actual value
 
+
+
+
+let genderForm = document.getElementById('genderform');
+let genderbtns = genderForm.gender;
 const submitbtn = document.getElementById('submit');
+
 
 //get user data when submit button is pressed
 
@@ -41,8 +50,26 @@ submitbtn.addEventListener('click', e=> {
 e.preventDefault();
 const weight = document.getElementById('weight').value;
 const height = document.getElementById('height').value;
+const age = document.getElementById('age').value;
+
 calculate(height, weight);
+
 }); 
+
+//set gender to male , same as checkbox when site is first opened
+
+let gender = male;
+
+//change gender dependion on user input
+for(let i=0; i<genderbtns.length; i++) {
+  genderbtns[i].addEventListener('change', (e)=> {
+    gender = e.target.value;
+    console.log(gender);
+  })
+}
+
+
+
 
 function calculate(height, weight) {
 	let xheight = height /100;
@@ -51,9 +78,12 @@ function calculate(height, weight) {
 	let finalrounded = Math.round(final*10)/10;
 	if(finalrounded >=15 && finalrounded <= 35) {
 		document.getElementById('output').innerHTML = "Your bmi is " + finalrounded;
-		gauge.set(finalrounded);
-	}else {
+    setGauge(finalrounded);
+    	}else {
 		document.getElementById('output').innerHTML = "Oops, something went wrong!";
 	}
 }
 
+function setGauge(x) {
+   gauge.set(x);
+}

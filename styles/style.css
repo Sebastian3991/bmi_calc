@@ -7,9 +7,26 @@ body, * {
 
 		/*heading*/
 h1 {
-	text-align: center;
 	color: orange;
+	text-align: center;
+
 }
+
+#genderform {
+	display: flex;
+	justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.fa-female {
+	color: #f1c40f;
+}
+.fa-male {
+	color: #f1c40f;
+}
+
+
+.gridwrapper div { width: 100% }
 
 		/*grid for whole site */
 #container {
@@ -21,7 +38,7 @@ h1 {
   height: 101%;
 }
 	/*form grid for label and inputs*/
-form {
+#form {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
     grid-column-gap: minmax(10px, 50px)
@@ -29,6 +46,9 @@ form {
 
 form#form label {
 	background-color: #FFFFCC;
+	display: flex;
+    justify-content: center;
+    align-items: center;
 	border: 1px ridge grey;
 	text-align: center;
 	margin-bottom: 30px;
@@ -44,8 +64,9 @@ form#form label {
 	border-radius: 1px;
 	font-size: 20px;
 	margin-bottom: 30px;
+	margin-left: 10px;
 	max-width: 100%;
-	min-width: 45px;
+	min-width: 30px;
 }
 input:hover {
   cursor: pointer;
@@ -59,6 +80,9 @@ input:focus {
 }
 
 button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	background-color: #F3B607;
 	text-align: center;
 	border: 1px solid grey;
@@ -66,7 +90,9 @@ button {
 	font-size: 20px;
 	font-weight: bold;
 	margin-bottom: 30px;
-	width: 100%;
+	margin: auto;
+	width: 200px;
+	height: 200px;
 
 }
 
@@ -86,6 +112,7 @@ table {
   background-color: #FFFFCC;
   border-collapse: collapse;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 table, th, td {
@@ -101,4 +128,14 @@ table, th, td {
 #preview-bmi {
 	font-size: 20px;
 	font-weight: bold;
+}
+
+@media only screen and (max-width: 500px) {
+#container{
+	display: grid;
+   	grid-template-columns: 1fr;
+  	grid-gap: 10px;
+  	background-color: #fff	;
+  	height: 101%;
+	  }
 }
